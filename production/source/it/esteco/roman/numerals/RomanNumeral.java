@@ -10,6 +10,8 @@ public class RomanNumeral {
     public String toString() {
         if (decimal == 0) {
             return "";
+        } else if (decimal == 4) {
+            return "IV";
         } else {
             return "I" + new RomanNumeral(decimal - 1).toString();
         }

@@ -26,6 +26,11 @@ public class DecimalToRomanConversionTest {
         check("III", 3);
     }
 
+    @Test
+    public void fourIsIV() {
+        check("IV", 4);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
