@@ -71,6 +71,11 @@ public class DecimalToRomanConversionTest {
         check("C", 100);
     }
 
+    @Test
+    public void fiveHundredIsD() {
+        check("D", 500);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
