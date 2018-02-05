@@ -31,6 +31,11 @@ public class DecimalToRomanConversionTest {
         check("IV", 4);
     }
 
+    @Test
+    public void fiveIsV() {
+        check("V", 5);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
