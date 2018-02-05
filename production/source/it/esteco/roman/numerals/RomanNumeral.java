@@ -20,6 +20,7 @@ public class RomanNumeral {
         decimalToNumeral.put(1000, "M");
         decimalToNumeral.put(400, "CD");
         decimalToNumeral.put(90, "XC");
+        decimalToNumeral.put(900, "CM");
     }
 
     private int decimal;

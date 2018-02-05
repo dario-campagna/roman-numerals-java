@@ -96,6 +96,11 @@ public class DecimalToRomanConversionTest {
         check("CDXCIV", 494);
     }
 
+    @Test
+    public void nineHundredIsCM() {
+        check("CM", 900);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
