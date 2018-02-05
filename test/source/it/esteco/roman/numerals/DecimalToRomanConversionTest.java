@@ -36,6 +36,11 @@ public class DecimalToRomanConversionTest {
         check("V", 5);
     }
 
+    @Test
+    public void sixIsVI() {
+        check("VI", 6);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
