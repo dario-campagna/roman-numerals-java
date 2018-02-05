@@ -13,6 +13,7 @@ public class RomanNumeral {
         decimalToNumeral.put(9, "IX");
         decimalToNumeral.put(10, "X");
         decimalToNumeral.put(1, "I");
+        decimalToNumeral.put(40, "XL");
     }
 
     private int decimal;
