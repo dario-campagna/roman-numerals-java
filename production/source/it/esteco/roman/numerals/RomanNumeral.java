@@ -17,6 +17,7 @@ public class RomanNumeral {
         decimalToNumeral.put(50, "L");
         decimalToNumeral.put(100, "C");
         decimalToNumeral.put(500, "D");
+        decimalToNumeral.put(1000, "M");
     }
 
     private int decimal;

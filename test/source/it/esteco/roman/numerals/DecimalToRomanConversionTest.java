@@ -76,6 +76,11 @@ public class DecimalToRomanConversionTest {
         check("D", 500);
     }
 
+    @Test
+    public void oneThousandIsM() {
+        check("M", 1000);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
