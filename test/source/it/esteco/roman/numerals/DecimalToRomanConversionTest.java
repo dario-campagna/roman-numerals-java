@@ -51,6 +51,11 @@ public class DecimalToRomanConversionTest {
         check("X", 10);
     }
 
+    @Test
+    public void fourteenIsXIV() {
+        check("XIV", 14);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }

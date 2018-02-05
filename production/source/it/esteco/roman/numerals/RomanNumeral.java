@@ -13,6 +13,7 @@ public class RomanNumeral {
         decimalToNumeral.put(5, "V");
         decimalToNumeral.put(9, "IX");
         decimalToNumeral.put(10, "X");
+        decimalToNumeral.put(1, "I");
     }
 
     private int decimal;
@@ -25,7 +26,15 @@ public class RomanNumeral {
         if (decimalToNumeral.containsKey(decimal)) {
             return decimalToNumeral.get(decimal);
         } else {
-            return new RomanNumeral(decimal - 1).toString() + "I";
+            int[] values = {10, 9, 5, 4, 1};
+            int key = 0;
+            for (int value : values) {
+                if (decimal - value > 0) {
+                    key = value;
+                    break;
+                }
+            }
+            return new RomanNumeral(key).toString() + new RomanNumeral(decimal-key);
         }
     }
 }
