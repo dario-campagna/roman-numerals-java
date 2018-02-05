@@ -61,6 +61,11 @@ public class DecimalToRomanConversionTest {
         check("XL", 40);
     }
 
+    @Test
+    public void fiftyIsL() {
+        check("L", 50);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
