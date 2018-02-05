@@ -25,11 +25,10 @@ public class RomanNumeral {
     public String toString() {
         if (decimalToNumeral.containsKey(decimal)) {
             return decimalToNumeral.get(decimal);
-        } else {
-            for (int key : decimalToNumeral.keySet()) {
-                if (decimal > key) {
-                    return new RomanNumeral(key).toString() + new RomanNumeral(decimal - key);
-                }
+        }
+        for (int key : decimalToNumeral.keySet()) {
+            if (decimal > key) {
+                return new RomanNumeral(key).toString() + new RomanNumeral(decimal - key);
             }
         }
         return "";
