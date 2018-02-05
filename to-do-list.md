@@ -14,6 +14,7 @@
 ~~500 → D~~  
 ~~1000 → M~~ 
 ~~400 → CD~~  
+~~90 → XC~~  
 900 → CM  
-494 → CDXCIV  
+~~494 → CDXCIV~~  
 1983 → MCMLXXXVIII  

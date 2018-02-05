@@ -86,6 +86,16 @@ public class DecimalToRomanConversionTest {
         check("CD", 400);
     }
 
+    @Test
+    public void ninetyIsXC() {
+        check("XC", 90);
+    }
+
+    @Test
+    public void fourHundredNinetyFour() {
+        check("CDXCIV", 494);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
