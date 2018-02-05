@@ -21,6 +21,11 @@ public class DecimalToRomanConversionTest {
         check("II", 2);
     }
 
+    @Test
+    public void threeIsIII() {
+        check("III", 3);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }

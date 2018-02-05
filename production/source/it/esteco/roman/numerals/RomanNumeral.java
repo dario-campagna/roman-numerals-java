@@ -12,8 +12,10 @@ public class RomanNumeral {
             return "";
         } else if (decimal == 1) {
             return "I";
-        } else {
+        } else if (decimal == 2) {
             return "II";
+        } else {
+            return "III";
         }
     }
 }
