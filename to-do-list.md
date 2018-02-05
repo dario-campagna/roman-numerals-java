@@ -17,4 +17,6 @@
 ~~90 → XC~~  
 ~~900 → CM~~  
 ~~494 → CDXCIV~~  
-1983 → MCMLXXXVIII  
+~~1983 → MCMLXXXIII~~  
+~~2412 → MMCDXII~~  
+~~3309 → MMMCCCIX~~

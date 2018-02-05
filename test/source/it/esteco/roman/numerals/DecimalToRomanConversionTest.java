@@ -101,6 +101,21 @@ public class DecimalToRomanConversionTest {
         check("CM", 900);
     }
 
+    @Test
+    public void oneThousandNineHundredEightyThreeIsMCMLXXXIII() {
+        check("MCMLXXXIII", 1983);
+    }
+
+    @Test
+    public void twoThousandFourHundredTwelveIsMMCDXII() {
+        check("MMCDXII", 2412);
+    }
+
+    @Test
+    public void threeThousandThreeHundredNineIsMMMCCCIX() {
+        check("MMMCCCIX", 3309);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
