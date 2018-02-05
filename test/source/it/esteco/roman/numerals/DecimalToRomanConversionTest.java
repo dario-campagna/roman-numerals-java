@@ -81,6 +81,11 @@ public class DecimalToRomanConversionTest {
         check("M", 1000);
     }
 
+    @Test
+    public void fourHundredIsCD() {
+        check("CD", 400);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
