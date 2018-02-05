@@ -8,11 +8,15 @@ public class DecimalToRomanConversionTest {
 
     @Test
     public void zeroIsEmpty() {
-        assertEquals("", new RomanNumeral(0).toString());
+        check("", 0);
     }
 
     @Test
     public void oneIsI() {
-        assertEquals("I", new RomanNumeral(1).toString());
+        check("I", 1);
+    }
+
+    private void check(String expectedString, int decimal) {
+        assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
 }
