@@ -16,6 +16,8 @@ public class RomanNumeral {
             return "V";
         } else if (decimal == 9) {
             return "IX";
+        } else if (decimal == 10) {
+            return "X";
         } else {
             return new RomanNumeral(decimal - 1).toString() + "I";
         }

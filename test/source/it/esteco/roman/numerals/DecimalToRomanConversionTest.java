@@ -46,6 +46,11 @@ public class DecimalToRomanConversionTest {
         check("IX", 9);
     }
 
+    @Test
+    public void tenIsX() {
+        check("X", 10);
+    }
+
     private void check(String expectedString, int decimal) {
         assertEquals(expectedString, new RomanNumeral(decimal).toString());
     }
