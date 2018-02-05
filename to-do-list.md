@@ -1,0 +1,27 @@
+0 → Empty string  
+1 → I  
+2 → II  
+3 → III  
+4 → IV  
+5 → V  
+6 → VI    
+9 → IX  
+10 → X  
+11 → XI   
+14 → XIV  
+15 → XV  
+16 → XVI  
+19 → XIX  
+20 → XX  
+30 → XXX  
+34 → XXXIV  
+39 → XXXIX  
+40 → XL  
+50 → L  
+58 → LVIII  
+70 → LXX  
+100 → C  
+500 → D  
+1000 → M  
+494 → CDXCIV  
+1983 → MCMLXXXVIII  
