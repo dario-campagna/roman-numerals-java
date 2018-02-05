@@ -1,6 +1,20 @@
 package it.esteco.roman.numerals;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class RomanNumeral {
+
+    private static Map<Integer, String> decimalToNumeral = new HashMap<>();
+
+    static {
+        decimalToNumeral.put(0, "");
+        decimalToNumeral.put(4, "IV");
+        decimalToNumeral.put(5, "V");
+        decimalToNumeral.put(9, "IX");
+        decimalToNumeral.put(10, "X");
+    }
+
     private int decimal;
 
     public RomanNumeral(int decimal) {
@@ -8,16 +22,8 @@ public class RomanNumeral {
     }
 
     public String toString() {
-        if (decimal == 0) {
-            return "";
-        } else if (decimal == 4) {
-            return "IV";
-        } else if (decimal == 5) {
-            return "V";
-        } else if (decimal == 9) {
-            return "IX";
-        } else if (decimal == 10) {
-            return "X";
+        if (decimalToNumeral.containsKey(decimal)) {
+            return decimalToNumeral.get(decimal);
         } else {
             return new RomanNumeral(decimal - 1).toString() + "I";
         }
