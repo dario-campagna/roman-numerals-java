@@ -1,14 +1,13 @@
 package it.esteco.roman.numerals;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class RomanNumeral {
 
-    private static Map<Integer, String> decimalToNumeral = new HashMap<>();
+    private static Map<Integer, String> decimalToNumeral = new TreeMap<>((o1, o2) -> o2 - o1);
 
     static {
-        decimalToNumeral.put(0, "");
         decimalToNumeral.put(4, "IV");
         decimalToNumeral.put(5, "V");
         decimalToNumeral.put(9, "IX");
@@ -26,15 +25,12 @@ public class RomanNumeral {
         if (decimalToNumeral.containsKey(decimal)) {
             return decimalToNumeral.get(decimal);
         } else {
-            int[] values = {10, 9, 5, 4, 1};
-            int key = 0;
-            for (int value : values) {
-                if (decimal - value > 0) {
-                    key = value;
-                    break;
+            for (int key : decimalToNumeral.keySet()) {
+                if (decimal > key) {
+                    return new RomanNumeral(key).toString() + new RomanNumeral(decimal - key);
                 }
             }
-            return new RomanNumeral(key).toString() + new RomanNumeral(decimal-key);
         }
+        return "";
     }
 }

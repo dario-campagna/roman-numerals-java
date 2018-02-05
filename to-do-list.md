@@ -8,13 +8,6 @@
 ~~9 → IX~~  
 ~~10 → X~~  
 ~~14 → XIV~~  
-15 → XV  
-16 → XVI  
-19 → XIX  
-20 → XX  
-30 → XXX  
-34 → XXXIV  
-39 → XXXIX  
 40 → XL  
 50 → L  
 58 → LVIII  
