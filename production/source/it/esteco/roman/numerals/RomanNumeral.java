@@ -3,7 +3,6 @@ package it.esteco.roman.numerals;
 import java.util.Map;
 import java.util.Optional;
 import java.util.TreeMap;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class RomanNumeral {
 
@@ -32,10 +31,10 @@ public class RomanNumeral {
     }
 
     public String toString() {
-        return closestKey().map(key -> decimalToNumeral.get(key) + new RomanNumeral(decimal - key)).orElse("");
+        return findClosestKey().map(key -> decimalToNumeral.get(key) + new RomanNumeral(decimal - key)).orElse("");
     }
 
-    private Optional<Integer> closestKey() {
+    private Optional<Integer> findClosestKey() {
         return decimalToNumeral.keySet().stream().filter(key -> decimal >= key).findFirst();
     }
 }
